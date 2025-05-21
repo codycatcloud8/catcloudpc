@@ -1,0 +1,7 @@
+name: Test-launch the app
+        run: |
+          cd build
+          sudo cp -R RawTherapee.app /Applications
+          open -a RawTherapee
+          sleep 5
+          osascript -e 'tell application "Finder"' -e 'get the name of every process whose visible is true' -e 'end tell
